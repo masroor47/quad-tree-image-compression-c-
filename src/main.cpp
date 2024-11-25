@@ -2,16 +2,6 @@
 #include <fstream>
 #include "QuadTree.h"
 
-void printMatrix(const std::unique_ptr<int[]>& matrix, int rows, int cols) {
-    for (int r = 0; r < rows; r++) {
-        for (int c = 0; c < cols; c++) {
-            std::cout << matrix[r * cols + c] << " ";
-        }
-        std::cout << std::endl;
-    }
-}
-
-
 int main(int argc, const char* argv[]) {
 
     if (argc != 4) {
@@ -51,7 +41,6 @@ int main(int argc, const char* argv[]) {
     output_file << "*** Below is the re-created image from Quad Tree" << std::endl;
     tree.matrixToFile(tree.newImage, output_file);
     output_file << "numRows, numCols, minVal, maxVal" << std::endl;
-
 
     input_file.close();
     output_file.close();
