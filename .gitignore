@@ -1,0 +1,16 @@
+# mac files
+.DS_Store
+
+# vscode
+.vscode
+
+# c++ binaries
+*.out
+bin/
+
+# object files
+*.o
+obj/
+
+# project specs
+project_specs
