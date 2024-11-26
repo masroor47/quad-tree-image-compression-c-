@@ -101,10 +101,10 @@ void QuadTree::postOrder(const QtNode& node, std::ofstream& output_file) {
     if (node.isLeaf()) {
         node.printQtNode(output_file);
     } else {
-        preOrder(*(node.NW), output_file);
-        preOrder(*(node.NE), output_file);
-        preOrder(*(node.SW), output_file);
-        preOrder(*(node.SE), output_file);
+        postOrder(*(node.NW), output_file);
+        postOrder(*(node.NE), output_file);
+        postOrder(*(node.SW), output_file);
+        postOrder(*(node.SE), output_file);
         node.printQtNode(output_file);
     }
 }
